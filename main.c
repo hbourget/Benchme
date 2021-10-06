@@ -4,9 +4,9 @@
 
 int main()
 {
-    int taille = 25000;
+    int taille = 100000; // 10^6
     float *tab = (float*) malloc(sizeof(float)*taille);
-    srand(1);
+    srand(1); // Graine
     for (int i=0;i<taille;i++)
     {
         tab[i] = ((float)rand() / (float)(RAND_MAX)) * taille;
@@ -21,6 +21,6 @@ int main()
         printf("\n%f ", tab[i]);
     }
 
-    float time_spent = (float)(debut - fin) / CLOCKS_PER_SEC;
+    double time_spent = (double)(fin - debut) / CLOCKS_PER_SEC;
     printf("\nTemps exec: %f", time_spent);
 }
