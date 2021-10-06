@@ -9,27 +9,22 @@
 #include <stdio.h>
 #include <string.h>
 
-void swap(int *a, int *b)
-{
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-}
-
-float *triBulle(int *tab)
+void triBulle(float *tab, int taille)
 {
     int i,k;
-    for(i = 0; i < strlen(tab)-1; i++)
+    float swap;
+    for(i = 0; i < taille-1; i++)
     {
-        for (k = 0; k > strlen(tab)-i-1; i++)
+        for (k = 0; k < taille-i-1; k++)
         {
-            if(tab[i] < tab[i+1])
+            if(tab[k] > tab[k+1])
             {
-                swap(&tab[i], &tab[i+1]);
+                swap = tab[k];
+                tab[k] = tab[k+1];
+                tab[k+1] = swap;
             }
         }
     }
-    return tab;
 }
 
 void *triSelection(char *tab)
