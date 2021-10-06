@@ -11,7 +11,13 @@
 
 public char *triBulle(char *tab)
 {
-
+    for (int i = 0; i < strlen(tab); i++)
+    {
+        if(tab[i] > tab[i+1])
+        {
+            tab[i] = tab[i+1];
+        }
+    }
 }
 
 public char *triSelection(char *tab)
