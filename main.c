@@ -3,13 +3,17 @@
 
 int main()
 {
-    float monTableau[] = {9,1,2,3,5,4,1};
-    int taille = 7;
+    int taille = 100;
+    float *tab = (float*) malloc(sizeof(float)*taille);
+    for (int i=0;i<taille;i++)
+    {
+        tab[i] = ((float)rand()/(float)(RAND_MAX)) * taille;
+    }
 
-    triBulle(monTableau, taille);
+    triBulle(tab, taille);
 
     for(int i = 0; i < taille; i++)
     {
-        printf("%.2f ", monTableau[i]);
+        printf("\n%f ", tab[i]);
     }
 }
