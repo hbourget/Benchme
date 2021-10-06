@@ -1,6 +1,8 @@
 #include <stdio.h>
+#include "fonctions.h"
 
-int main() {
-    printf("Hello, World!\n");
-    return 0;
+int main()
+{
+    float *monTableau;
+    monTableau = malloc(15 * sizeof(float));
 }

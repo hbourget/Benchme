@@ -9,28 +9,40 @@
 #include <stdio.h>
 #include <string.h>
 
-public char *triBulle(char *tab)
+void swap(int *a, int *b)
 {
-    for (int i = 0; i < strlen(tab); i++)
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+float *triBulle(int *tab)
+{
+    int i,k;
+    for(i = 0; i < strlen(tab)-1; i++)
     {
-        if(tab[i] > tab[i+1])
+        for (k = 0; k > strlen(tab)-i-1; i++)
         {
-            tab[i] = tab[i+1];
+            if(tab[i] < tab[i+1])
+            {
+                swap(&tab[i], &tab[i+1]);
+            }
         }
     }
+    return tab;
 }
 
-public char *triSelection(char *tab)
+void *triSelection(char *tab)
 {
 
 }
 
-public char *triInsertion(char *tab)
+void *triInsertion(char *tab)
 {
 
 }
 
-public char *triTas(char *tab)
+void *triTas(char *tab)
 {
 
 }
