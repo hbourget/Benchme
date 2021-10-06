@@ -26,7 +26,7 @@ public char *triInsertion(char *tab)
 
 public char *triTas(char *tab)
 {
-
+ if(true)
 }
 
 #endif //BENCHME_FONCTIONS_H
