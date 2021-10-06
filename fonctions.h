@@ -9,25 +9,34 @@
 #include <stdio.h>
 #include <string.h>
 
-int *triBulle(int *tab)
+int len(float *tab){
+    int j;
+    for(int i = 0; tab[i]!=-1;i++){
+        j=i;
+        printf("val i: %d\n",j);
+    }
+    j++;
+    return j;
+}
+
+void *triBulle(float *tab)
+{
+    //Hugo
+}
+
+void *triSelection(float *tab)
+{
+    printf("len: %d", len(tab));
+}
+
+void *triInsertion(float *tab)
 {
 
 }
 
-int *triSelection(int *tab)
+void *triTas(float *tab)
 {
-
-
-}
-
-int *triInsertion(int *tab)
-{
-
-}
-
-int *triTas(int *tab)
-{
-
+    //Hugo
 }
 
 #endif //BENCHME_FONCTIONS_H
