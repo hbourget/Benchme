@@ -9,24 +9,25 @@
 #include <stdio.h>
 #include <string.h>
 
-public char *triBulle(char *tab)
+int *triBulle(int *tab)
 {
 
 }
 
-public char *triSelection(char *tab)
+int *triSelection(int *tab)
+{
+
+
+}
+
+int *triInsertion(int *tab)
 {
 
 }
 
-public char *triInsertion(char *tab)
+int *triTas(int *tab)
 {
 
-}
-
-public char *triTas(char *tab)
-{
- if(true)
 }
 
 #endif //BENCHME_FONCTIONS_H
