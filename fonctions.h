@@ -9,6 +9,31 @@
 #include <stdio.h>
 #include <string.h>
 
+float *getTab(int taille)
+{
+    float *tab = (float*) malloc(sizeof(float)*taille);
+    srand(3); // Graine
+    for (int i=0;i<taille;i++)
+    {
+        tab[i] = ((float)rand() / (float)(RAND_MAX)) * taille;
+    }
+    return tab;
+}
+
+void printTab(float *tab, int taille)
+{
+    for(int i = 0; i < taille; i++)
+    {
+        printf("\n%f ", tab[i]);
+    }
+}
+
+void getTime(clock_t debut, clock_t fin)
+{
+    double time_spent = (double)(fin - debut) / CLOCKS_PER_SEC;
+    printf("\nTemps exec: %f", time_spent);
+}
+
 void triBulle(float *tab, int taille)
 {
     int i,k;

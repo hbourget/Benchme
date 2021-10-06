@@ -4,23 +4,14 @@
 
 int main()
 {
-    int taille = 100000; // 10^6
-    float *tab = (float*) malloc(sizeof(float)*taille);
-    srand(1); // Graine
-    for (int i=0;i<taille;i++)
-    {
-        tab[i] = ((float)rand() / (float)(RAND_MAX)) * taille;
-    }
+    int taille = 1000;
+    float *tab = getTab(taille);
 
     clock_t debut = clock();
     triBulle(tab, taille);
     clock_t fin = clock();
 
-    for(int i = 0; i < taille; i++)
-    {
-        printf("\n%f ", tab[i]);
-    }
+    printTab(tab, taille);
 
-    double time_spent = (double)(fin - debut) / CLOCKS_PER_SEC;
-    printf("\nTemps exec: %f", time_spent);
+    getTime(debut, fin);
 }
