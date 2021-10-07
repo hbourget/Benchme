@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdbool.h>
 
 float *getTab(int taille)
 {
@@ -36,18 +37,25 @@ void getTime(clock_t debut, clock_t fin)
 
 void triBulle(float *tab, int taille)
 {
-    int i,k;
+    int i, k;
     float swap;
-    for(i = 0; i < taille-1; i++)
+    bool test;
+    for (i = 0; i < taille-1; i++)
     {
+        test = false;
         for (k = 0; k < taille-i-1; k++)
         {
-            if(tab[k] > tab[k+1])
+            if (tab[k] > tab[k+1])
             {
                 swap = tab[k];
                 tab[k] = tab[k+1];
                 tab[k+1] = swap;
+                test = true;
             }
+        }
+        if (!test)
+        {
+            break;
         }
     }
 }
