@@ -35,6 +35,23 @@ void getTime(clock_t debut, clock_t fin)
     printf("\nTemps exec: %f", time_spent);
 }
 
+bool verify(float *tab, int taille)
+{
+    bool ret = true;
+    for (int i = 0; i < taille; i++)
+    {
+        if(i+1 > taille)
+        {
+            if((tab[i] - tab[i+1]) > 0)
+            {
+                ret = false;
+                break;
+            }
+        }
+    }
+    return ret;
+}
+
 void triBulle(float *tab, int taille)
 {
     int i, k;
@@ -60,17 +77,17 @@ void triBulle(float *tab, int taille)
     }
 }
 
-void *triSelection(char *tab)
+void *triSelection(float *tab)
 {
 
 }
 
-void *triInsertion(char *tab)
+void *triInsertion(float *tab)
 {
 
 }
 
-void *triTas(char *tab)
+void *triTas(float *tab)
 {
 
 }

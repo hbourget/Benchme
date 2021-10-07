@@ -1,10 +1,10 @@
-#include <stdio.h>
 #include <time.h>
+#include <assert.h>
 #include "fonctions.h"
 
 int main()
 {
-    int taille = 1000;
+    int taille = 3;
     float *tab = getTab(taille);
 
     clock_t debut = clock();
@@ -12,6 +12,8 @@ int main()
     clock_t fin = clock();
 
     printTab(tab, taille);
+
+    assert(verify(tab,taille));
 
     getTime(debut, fin);
 }
