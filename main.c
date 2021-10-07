@@ -4,7 +4,7 @@
 
 int main()
 {
-    int taille = 3;
+    int taille = 10000;
     float *tab = getTab(taille);
 
     clock_t debut = clock();
