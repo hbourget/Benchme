@@ -40,8 +40,10 @@ bool verify(float *tab, int taille)
     bool ret = true;
     for (int i = 0; i < taille; i++)
     {
-        if(i+1 > taille)
+        if(i+1 < taille)
         {
+            int a = tab[i];
+            int b = tab[i+1];
             if((tab[i] - tab[i+1]) > 0)
             {
                 ret = false;
@@ -77,9 +79,25 @@ void triBulle(float *tab, int taille)
     }
 }
 
-void *triSelection(float *tab)
+void *triSelection(float *tab, taille)
 {
-
+    int i,k, pos;
+    float swap;
+    for (i = 0; i < taille-1; i++) // finding minimum element (n-1) times
+    {
+        pos = i;
+        for (k = i + 1; k < taille; k++)
+        {
+            if (tab[pos] > tab[k])
+                pos = k;
+        }
+        if (pos != i)
+        {
+            swap = tab[i];
+            tab[i] = tab[pos];
+            tab[pos] = swap;
+        }
+    }
 }
 
 void *triInsertion(float *tab)
