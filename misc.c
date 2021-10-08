@@ -24,7 +24,7 @@ double getTime(clock_t debut, clock_t fin)
     return time_spent;
 }
 
-bool verification(float *tab, int taille)
+bool isSorted(float *tab, int taille)
 {
     bool ret = true;
     for (int i = 0; i < taille; i++)
@@ -41,7 +41,22 @@ bool verification(float *tab, int taille)
     return ret;
 }
 
+void writeLabel(char *nomFonction, char *fichier)
+{
+    FILE *out = fopen( fichier, "a" );
+    fprintf(out, "%s\n", nomFonction);
+    fclose(out);
+}
+
+void writeValue(double moyenne, int num, char *fichier)
+{
+    FILE *out = fopen( fichier, "a" );
+    fprintf(out, "10^%d,%.6f\n", num, moyenne);
+    fclose(out);
+}
+
 void logInfo(char *nomFonction, int num, float moyenne)
 {
     printf("%s - Tri de 10^%d valeurs - Temps moyen: %.6f secondes\n", nomFonction,num,moyenne);
 }
+

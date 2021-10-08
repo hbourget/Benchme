@@ -5,9 +5,6 @@
 #ifndef BENCHME_BENCH_H
 #define BENCHME_BENCH_H
 
-// Ecriture de la moyenne pour la taille "n" dans le fichier de sortie
-void writeFile(double temps, char *fichier);
-
 void benchBulle(char *fichier);
 
 void benchSelection(char *fichier);
