@@ -1,26 +1,9 @@
 //
-// Created by h.bourget on 06/10/2021.
+// Created by Admin on 08/10/2021.
 //
 
-#ifndef BENCHME_FONCTIONS_H
-#define BENCHME_FONCTIONS_H
-
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdbool.h>
-
-//Obtenir un tableau avec une taillet et un seed donné
-float *getTab(int taille, int graine);
-
-//Obtenir le temps de bench d'un tri
-double getTime(clock_t debut, clock_t fin);
-
-//Verifie si un tableau est bien trillé dans l'ordre croissant
-bool verification(float *tab, int taille);
-
-//Retourne des informations à l'utilisateur dans la console
-void logInfo(char *nomFonction, int num, float moyenne);
+#ifndef BENCHME_TRI_H
+#define BENCHME_TRI_H
 
 //Algo tri à bulle
 void triBulle(float *tab, int taille);
@@ -40,4 +23,4 @@ void tamiser(float *tab, int taille, int i);
 /* */
 void triTas(float *tab, int taille);
 
-#endif //BENCHME_FONCTIONS_H
+#endif //BENCHME_TRI_H

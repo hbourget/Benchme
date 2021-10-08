@@ -4,12 +4,14 @@
 #include <stdio.h>
 #include <time.h>
 #include <math.h>
-#include "fonctions.h"
+#include <stdbool.h>
+#include "misc.h"
+#include "tri.h"
 
 void writeFile(double moyenne, char *fichier)
 {
     FILE *out = fopen( fichier, "a" );
-    fprintf(out, "%.5f\n", moyenne);
+    fprintf(out, "%.6f\n", moyenne);
     fclose(out);
 }
 

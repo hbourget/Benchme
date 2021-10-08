@@ -3,4 +3,4 @@ project(Benchme C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(Benchme main.c fonctions.h fonctions.c bench.c bench.h)
+add_executable(Benchme main.c bench.c bench.h tri.c tri.h misc.c misc.h)
