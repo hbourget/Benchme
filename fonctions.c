@@ -46,6 +46,11 @@ bool verification(float *tab, int taille)
     return ret;
 }
 
+void logInfo(char *nomFonction, int num, float moyenne)
+{
+    printf("%s - Tri de 10^%d valeurs - Temps moyen: %.5f secondes\n", nomFonction,num,moyenne);
+}
+
 void triBulle(float *tab, int taille)
 {
     int i, k;

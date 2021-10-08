@@ -6,11 +6,10 @@
 #include <math.h>
 #include "fonctions.h"
 
-void writeFile(double temps, char *fichier)
+void writeFile(double moyenne, char *fichier)
 {
-    printf("%s", fichier);
     FILE *out = fopen( fichier, "a" );
-    fprintf(out, "%.5f\n", temps);
+    fprintf(out, "%.5f\n", moyenne);
     fclose(out);
 }
 
@@ -39,13 +38,14 @@ void benchBulle(char *fichier)
             clock_t fin = clock();
             temps = getTime(debut, fin);
 
-            isSorted = verification(tab, laTaille); // On verifie que le tableau est bien trié
+            isSorted = verification(tab, laTaille);
             moyenne = moyenne + temps;
         }
         moyenne = moyenne / 3;
         if(isSorted)
         {
-            writeFile(moyenne, fichier); // Ecriture de la moyenne pour la taille n dans le fichier de sortie
+            writeFile(moyenne, fichier);
+            logInfo(__func__, j, moyenne);
         }
     }
 }
@@ -76,12 +76,13 @@ void benchSelection(char *fichier)
             temps = getTime(debut, fin);
 
             moyenne = moyenne + temps;
-            isSorted = verification(tab, laTaille); // On verifie que le tableau est bien trié
+            isSorted = verification(tab, laTaille);
         }
         moyenne = moyenne / 3;
         if(isSorted)
         {
-            writeFile(moyenne, fichier); // Ecriture de la moyenne pour la taille n dans le fichier de sortie
+            writeFile(moyenne, fichier);
+            logInfo(__func__, j, moyenne);
         }
     }
 }
@@ -112,12 +113,13 @@ void benchInsertion(char *fichier)
             temps = getTime(debut, fin);
 
             moyenne = moyenne + temps;
-            isSorted = verification(tab, laTaille); // On verifie que le tableau est bien trié
+            isSorted = verification(tab, laTaille);
         }
         moyenne = moyenne / 3;
         if(isSorted)
         {
-            writeFile(moyenne, fichier); // Ecriture de la moyenne pour la taille n dans le fichier de sortie
+            writeFile(moyenne, fichier);
+            logInfo(__func__, j, moyenne);
         }
     }
 }
@@ -148,12 +150,13 @@ void benchTas(char *fichier)
             temps = getTime(debut, fin);
 
             moyenne = moyenne + temps;
-            isSorted = verification(tab, laTaille); // On verifie que le tableau est bien trié
+            isSorted = verification(tab, laTaille);
         }
         moyenne = moyenne / 3;
         if(isSorted)
         {
-            writeFile(moyenne, fichier); // Ecriture de la moyenne pour la taille n dans le fichier de sortie
+            writeFile(moyenne, fichier);
+            logInfo(__func__, j, moyenne);
         }
     }
 }

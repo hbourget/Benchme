@@ -19,6 +19,9 @@ double getTime(clock_t debut, clock_t fin);
 //Verifie si un tableau est bien trillé dans l'ordre croissant
 bool verification(float *tab, int taille);
 
+//Retourne des informations à l'utilisateur dans la console
+void logInfo(char *nomFonction, int num, float moyenne);
+
 //Algo tri à bulle
 void triBulle(float *tab, int taille);
 
