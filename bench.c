@@ -63,10 +63,6 @@ void testTas(char *fichier)
             {
                 writeFile(moyenne, fichier);
             }
-            else
-            {
-                printf("Le tableau n'est pas trié");
-            }
         }
     }
 }
