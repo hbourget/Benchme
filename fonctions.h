@@ -1,6 +1,14 @@
-//
-// Created by h.bourget on 06/10/2021.
-//
+/************************************************
+* FONCTIONS.h
+ * Toutes les fonctions de trie :
+ * - Bulle
+ * - Selection
+ * - Insersion
+ * - Tas
+ *
+ *
+ *
+***********************************************/
 
 #ifndef BENCHME_FONCTIONS_H
 #define BENCHME_FONCTIONS_H
