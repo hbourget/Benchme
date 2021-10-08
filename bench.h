@@ -7,8 +7,12 @@
 
 void writeFile(double temps, char *fichier);
 
-void testBulle(char *fichier);
+void benchBulle(char *fichier);
 
-void testTas(char *fichier);
+void benchSelection(char *fichier);
+
+void benchInsertion(char *fichier);
+
+void benchTas(char *fichier);
 
 #endif //BENCHME_BENCH_H

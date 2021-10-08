@@ -21,14 +21,6 @@ float *getTab(int taille, int graine)
     return tab;
 }
 
-void printTab(float *tab, int taille)
-{
-    for(int i = 0; i < taille; i++)
-    {
-        printf("\n%f ", tab[i]);
-    }
-}
-
 double getTime(clock_t debut, clock_t fin)
 {
     double time_spent = (double)(fin - debut) / CLOCKS_PER_SEC;

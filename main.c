@@ -1,9 +1,9 @@
-#include <time.h>
-#include <assert.h>
-#include "fonctions.h"
 #include "bench.h"
 
 int main(int argc, char *argv[])
 {
-    testTas(argv[1]);
+    benchBulle(argv[1]);
+    benchSelection(argv[1]);
+    benchInsertion(argv[1]);
+    benchTas(argv[1]);
 }
