@@ -14,10 +14,11 @@ void triBulle(float *tab, int taille);
 - Continuer de cette façon jusqu'à ce que le tableau soit entièrement trié.*/
 void *triSelection(float *tab, int taille);
 
-/* Le tri par insertion considère chaque élément du tableau et l'insère à la bonne place parmi les éléments déjà triés. Ainsi, au moment où on considère un élément, les éléments qui le précèdent sont déjà triés, tandis que les éléments qui le suivent ne sont pas encore triés. */
+/* Le tri par insertion considère chaque élément du tableau et l'insère à la bonne place parmi les éléments déjà triés.
+ * Ainsi, au moment où on considère un élément, les éléments qui le précèdent sont déjà triés, tandis que les éléments qui le suivent ne sont pas encore triés. */
 void triInsertion(float *tab, int taille);
 
-/* Le tri par tas cherche à obtenir un "tas", c'est-à-dire un arbre binaire vérifiant les propriétés suivantes (les deux premières propriétés découlent de la manière dont on considère les éléments du tableau) :
+/* Le tri par tas cherche à obtenir un "tas", c'est-à-dire un arbre binaire vérifiant les propriétés suivantes :
 la différence maximale de profondeur entre deux feuilles est de 1 (i.e. toutes les feuilles se trouvent sur la dernière ou sur l'avant-dernière ligne) ;
 les feuilles de profondeur maximale sont « tassées » sur la gauche.
 chaque nœud est de valeur supérieure (resp. inférieure) à celles de ses deux fils, pour un tri ascendant (resp. descendant). */
