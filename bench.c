@@ -17,6 +17,7 @@ void writeFile(double temps, char *fichier)
 
 void testBulle(char *fichier)
 {
+    float temps, moyenne;
     for (int j = 0; j < 3; j++)
     {
         for (int k = 2; k < 5; k++)
@@ -27,9 +28,9 @@ void testBulle(char *fichier)
             clock_t debut = clock();
             triBulle(tab, laTaille);
             clock_t fin = clock();
-            double temps = getTime(debut, fin);
+            temps = getTime(debut, fin);
             bool isSorted = verification(tab, laTaille);
-            float moyenne = moyenne + temps;
+            moyenne = moyenne + temps;
             moyenne = moyenne / 3;
             if(isSorted)
             {
@@ -45,24 +46,27 @@ void testBulle(char *fichier)
 
 void testTas(char *fichier)
 {
+    float moyenne, temps;
     for (int j = 2; j < 8; j++)
     {
+        moyenne = 0;
+        bool isSorted = false;
+        int laTaille = pow(10,j);
         for (int k = 0; k < 3; k++)
         {
-            int laTaille = pow(10,j);
             int laGraine = k;
             float *tab = getTab(laTaille, laGraine);
             clock_t debut = clock();
             triTas(tab, laTaille);
             clock_t fin = clock();
-            double temps = getTime(debut, fin);
-            float moyenne = moyenne + temps;
-            moyenne = moyenne / 3;
-            bool isSorted = verification(tab, laTaille);
-            if(isSorted)
-            {
-                writeFile(moyenne, fichier);
-            }
+            temps = getTime(debut, fin);
+            moyenne = moyenne + temps;
+            isSorted = verification(tab, laTaille);
+        }
+        moyenne = moyenne / 3;
+        if(isSorted)
+        {
+            writeFile(moyenne, fichier);
         }
     }
 }
