@@ -29,10 +29,10 @@ void printTab(float *tab, int taille)
     }
 }
 
-void getTime(clock_t debut, clock_t fin)
+double getTime(clock_t debut, clock_t fin)
 {
     double time_spent = (double)(fin - debut) / CLOCKS_PER_SEC;
-    printf("\nTemps exec: %f", time_spent);
+    return time_spent;
 }
 
 bool verification(float *tab, int taille)
