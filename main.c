@@ -7,27 +7,31 @@
 int main() {
     float *tableau;
     int j;
-    tableau = malloc(15 * sizeof(float));
+    tableau = malloc(150 * sizeof(float));
 
     srand(76655);
 
-    for(int i = 0; i < 8; i ++){
+    for(int i = 0; i < 149; i ++){
         tableau[i] = rand();
 
     }
 
     printf("Tableau\n");
 
-    for(int i = 0; i < 8; i ++){
+    for(int i = 0; i < 149; i ++){
         printf("i:\t%d\t%.3f\n", i,tableau[i]);
         j=i;
     }
-    j++;
-    tableau[j] = -1.0;
-    printf("i:\t%d\t%.3f\n", j,tableau[j]);
+    printf("====================\n");
 
-    triSelection(tableau);
+    triSelection(tableau, 149);
 
+    printf("====================\n");
+    for(int i = 0; i < 149; i ++){
+        printf("i:\t%d\t%.3f\n", i,tableau[i]);
+        j=i;
+    }
+    printf("====================\n");
     return 0;
 }
 

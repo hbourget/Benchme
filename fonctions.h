@@ -9,32 +9,54 @@
 #include <stdio.h>
 #include <string.h>
 
-int len(float *tab){
-    int j;
-    for(int i = 0; tab[i]!=-1;i++){
-        j=i;
-        printf("val i: %d\n",j);
-    }
-    j++;
-    return j;
-}
-
-void *triBulle(float *tab)
+void triBulle(float *tab, int taille)
 {
     //Hugo
 }
 
-void *triSelection(float *tab)
+void triSelection(float *tab, int taille)
 {
-    printf("len: %d", len(tab));
+    int i,k, pos;
+    float swap;
+    for (i = 0; i < taille-1; i++) //Recherche de l'element minimum (n-1) fois
+    {
+        pos = i;
+        for (k = i + 1; k < taille; k++)
+        {
+            if (tab[pos] > tab[k])
+                pos = k;
+        }
+        if (pos != i)
+        {
+            swap = tab[i];
+            tab[i] = tab[pos];
+            tab[pos] = swap;
+        }
+    }
 }
 
-void *triInsertion(float *tab)
+void triInsertion(float *tab, int taille)
 {
+    int i, j;
+    float x;
+    for (i = 1; i < taille; i++)
+    {
+        //Mémoriser tab[i] dans "memo"
+        x = tab[i];
 
+        j = i - 1;
+
+        /* Décaler les éléments tab[0]..tab[i-1] qui sont plus grands que "x", en partant de tab[i-1] */
+        while (j >= 0 && tab[j] > x)
+        {
+            tab[j + 1] = tab[j];
+            j = j - 1;
+        }
+        tab[j + 1] = x;
+    }
 }
 
-void *triTas(float *tab)
+void triTas(float *tab, int taille)
 {
     //Hugo
 }
