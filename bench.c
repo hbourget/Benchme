@@ -1,7 +1,6 @@
 //
 // Created by h.bourget on 08/10/2021.
 //
-#include <stdio.h>
 #include <time.h>
 #include <math.h>
 #include <stdbool.h>
