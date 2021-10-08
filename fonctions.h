@@ -10,10 +10,10 @@
 #include <string.h>
 #include <stdbool.h>
 
-float *getTab(int taille)
+float *getTab(int taille, int graine)
 {
     float *tab = (float*) malloc(sizeof(float)*taille);
-    srand(3); // Graine
+    srand(graine); // Graine
     for (int i=0;i<taille;i++)
     {
         tab[i] = ((float)rand() / (float)(RAND_MAX)) * taille;
@@ -35,7 +35,7 @@ void getTime(clock_t debut, clock_t fin)
     printf("\nTemps exec: %f", time_spent);
 }
 
-bool verify(float *tab, int taille)
+bool verification(float *tab, int taille)
 {
     bool ret = true;
     for (int i = 0; i < taille; i++)
@@ -83,7 +83,7 @@ void *triSelection(float *tab, int taille)
 {
     int i,k, pos;
     float swap;
-    for (i = 0; i < taille-1; i++) // finding minimum element (n-1) times
+    for (i = 0; i < taille-1; i++) //Recherche de l'element minimum (n-1) fois
     {
         pos = i;
         for (k = i + 1; k < taille; k++)
@@ -100,14 +100,76 @@ void *triSelection(float *tab, int taille)
     }
 }
 
-void *triInsertion(float *tab)
+void triInsertion(float *tab, int taille)
 {
+    int i, j;
+    float x;
+    for (i = 1; i < taille; i++)
+    {
+        //Mémoriser tab[i] dans "memo"
+        x = tab[i];
 
+        j = i - 1;
+
+        /* Décaler les éléments tab[0]..tab[i-1] qui sont plus grands que "x", en partant de tab[i-1] */
+        while (j >= 0 && tab[j] > x)
+        {
+            tab[j + 1] = tab[j];
+            j = j - 1;
+        }
+        tab[j + 1] = x;
+    }
 }
 
-void *triTas(float *tab)
+void tamiser(float *tab, int taille, int i)
 {
+    int plusGrand = i; // Racine
+    int gauche = 2 * i + 1; // gauche = 2 * racine + 1
+    int droit = 2 * i + 2; // right = 2 * racine + 2
+    float swap;
 
+    // Si le nombre enfant à gauche est plus grand que la racine "plusGrand"
+    if (gauche < taille && tab[gauche] > tab[plusGrand])
+    {
+        plusGrand = gauche;
+    }
+
+    // Si le nombre enfant à droite est plus grand que la racine "plusGrand"
+    if (droit < taille && tab[droit] > tab[plusGrand])
+    {
+        plusGrand = droit;
+    }
+
+    // Si le plus grand n'est pas la racine de l'arbre
+    if (plusGrand != i)
+    {
+        swap = tab[i];
+        tab[i] = tab[plusGrand];
+        tab[plusGrand] = swap;
+
+        // Tassement récursif du sous arbre
+        tamiser(tab, taille, plusGrand);
+    }
+}
+
+void triTas(float *tab, int taille)
+{
+    float temp;
+    // Construction de l'arbre
+    for (int i = taille / 2 - 1; i >= 0; i--)
+    {
+        tamiser(tab, taille, i);
+    }
+
+    // Extraction des elements 1 par 1
+    for (int i = taille - 1; i > 0; i--) {
+        // Deplacement de la racine actuelle à la fin
+        temp = tab[0];
+        tab[0] = tab[i];
+        tab[i] = temp;
+
+        tamiser(tab, i, 0);
+    }
 }
 
 #endif //BENCHME_FONCTIONS_H
