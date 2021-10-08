@@ -31,8 +31,6 @@ bool verification(float *tab, int taille)
     {
         if(i+1 < taille)
         {
-            int a = tab[i];
-            int b = tab[i+1];
             if((tab[i] - tab[i+1]) > 0)
             {
                 ret = false;
