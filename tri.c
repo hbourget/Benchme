@@ -28,7 +28,7 @@ void triBulle(float *tab, int taille)
     }
 }
 
-void *triSelection(float *tab, int taille)
+void triSelection(float *tab, int taille)
 {
     int i,k, pos;
     float swap;

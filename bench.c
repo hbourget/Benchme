@@ -14,7 +14,7 @@ void benchBulle(char *fichier)
     int laGraine;
     bool sorted;
 
-    writeLabel(__func__, fichier);
+    writeLabel("benchBulle", fichier);
 
     //Sachant que le tri à bulle à une complexité quadratique, nous utiliserons des valeurs allant de 10^2 à 10^5
     for (int j = 2; j < 6; j++)
@@ -42,19 +42,19 @@ void benchBulle(char *fichier)
         if(sorted)
         {
             writeValue(moyenne, j, fichier);
-            logInfo(__func__, j, moyenne);
+            logInfo("benchBulle", j, moyenne);
         }
     }
 }
 
 void benchSelection(char *fichier)
 {
-    float temps, moyenne;
+    double temps, moyenne;
     int laTaille;
     int laGraine;
     bool sorted;
 
-    writeLabel(__func__, fichier);
+    writeLabel("benchSelection", fichier);
 
     //Sachant que le tri par selection à une complexité quadratique, nous utiliserons des valeurs allant de 10^2 à 10^5
     for (int j = 2; j < 6; j++)
@@ -82,19 +82,19 @@ void benchSelection(char *fichier)
         if(sorted)
         {
             writeValue(moyenne, j, fichier);
-            logInfo(__func__, j, moyenne);
+            logInfo("benchSelection", j, moyenne);
         }
     }
 }
 
 void benchInsertion(char *fichier)
 {
-    float temps, moyenne;
+    double temps, moyenne;
     int laTaille;
     int laGraine;
     bool sorted;
 
-    writeLabel(__func__, fichier);
+    writeLabel("benchInsertion", fichier);
 
     //Sachant que le tri par insertion à une complexité quadratique, nous utiliserons des valeurs allant de 10^2 à 10^5
     for (int j = 2; j < 6; j++)
@@ -122,19 +122,19 @@ void benchInsertion(char *fichier)
         if(sorted)
         {
             writeValue(moyenne, j, fichier);
-            logInfo(__func__, j, moyenne);
+            logInfo("benchInsertion", j, moyenne);
         }
     }
 }
 
 void benchTas(char *fichier)
 {
-    float temps, moyenne;
+    double temps, moyenne;
     int laTaille;
     int laGraine;
     bool sorted;
 
-    writeLabel(__func__, fichier);
+    writeLabel("benchTas", fichier);
 
     //Définition de la taille du tableau (10^2 à 10^7)
     for (int j = 2; j < 8; j++)
@@ -162,7 +162,7 @@ void benchTas(char *fichier)
         if(sorted)
         {
             writeValue(moyenne, j, fichier);
-            logInfo(__func__, j, moyenne);
+            logInfo("benchTas", j, moyenne);
         }
     }
 }

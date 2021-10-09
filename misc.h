@@ -15,12 +15,12 @@ double getTime(clock_t debut, clock_t fin);
 bool isSorted(float *tab, int taille);
 
 // Ecriture du label de la fonction en entete des valeurs
-void writeLabel(char* nomFonction, char *fichier);
+void writeLabel(char *nomFonction, char *fichier);
 
 // Ecriture de la moyenne pour la taille "n" dans le fichier de sortie
 void writeValue(double moyenne, int num, char *fichier);
 
 //Retourne des informations à l'utilisateur dans la console
-void logInfo(char *nomFonction, int num, float moyenne);
+void logInfo(char *nomFonction, int num, double moyenne);
 
 #endif //BENCHME_MISC_H

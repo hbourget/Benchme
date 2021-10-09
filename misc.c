@@ -55,7 +55,7 @@ void writeValue(double moyenne, int num, char *fichier)
     fclose(out);
 }
 
-void logInfo(char *nomFonction, int num, float moyenne)
+void logInfo(char *nomFonction, int num, double moyenne)
 {
     printf("%s - Tri de 10^%d valeurs - Temps moyen: %.6f secondes\n", nomFonction,num,moyenne);
 }
