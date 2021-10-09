@@ -13,6 +13,7 @@ $(EXEC): $(OBJ)
 
 clean:
 	rm -rf $(OBJ) $(EXEC)
-
+	
+.PHONY: documentation
 documentation:
 	doxygene Doxyfile
