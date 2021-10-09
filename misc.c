@@ -41,7 +41,7 @@ bool isSorted(float *tab, int taille)
     return ret;
 }
 
-void writeLabel(char *nomFonction, char *fichier)
+void writeLabel(char const *nomFonction, char *fichier)
 {
     FILE *out = fopen( fichier, "a" );
     fprintf(out, "%s\n", nomFonction);
@@ -55,7 +55,7 @@ void writeValue(double moyenne, int num, char *fichier)
     fclose(out);
 }
 
-void logInfo(char *nomFonction, int num, double moyenne)
+void logInfo(char const *nomFonction, int num, double moyenne)
 {
     printf("%s - Tri de 10^%d valeurs - Temps moyen: %.6f secondes\n", nomFonction,num,moyenne);
 }
