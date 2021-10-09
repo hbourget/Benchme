@@ -14,5 +14,6 @@ $(EXEC): $(OBJ)
 clean:
 	rm -rf $(OBJ) $(EXEC)
 
+.PHONY: documentation
 documentation:
 	cat doc
