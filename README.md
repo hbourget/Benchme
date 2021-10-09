@@ -18,7 +18,7 @@ L'indice de performance comparé ici est la complexité temporel, ou comment év
 |Tri par tas / Heap sort|O(n log(n))
 
 ## Installation
-  * Cloner le projet :``git clone https://github.com/hbourget/Benchme.git``
+  * Cloner le projet ``git clone https://github.com/hbourget/Benchme.git``
   * Générer le fichier exécutable dans le répertoire
     * Windows : ``mingw32-make``
     * Linux : ``sudo make`` 
