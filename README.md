@@ -56,15 +56,15 @@ La documentation est généré sous format HTML. Pour la lire, il suffit d'ouvri
 
 ## Résultats attendus
 
-On attends des courbes représentant une fonction au carré pour 3 des 4 fonctions testés (Bulle, Insertion, Sélection):
+On attend des courbes quadratiques pour 3 des 4 algorithmes de tri testés (Bulle, Insertion, Sélection):
 
 ![TP_Trie_Courbe_Carre](https://user-images.githubusercontent.com/57684366/136666747-86e36a3c-3324-47e9-aa66-b24bb229a10b.png)
 
-Le trie en tas doit normalement avoir une courbe représentant *n log(n)* :
+Le tri en tas doit avoir une courbe représentant *n log(n)* :
 
 ![TP_Trie_Courbe_Log](https://user-images.githubusercontent.com/57684366/136666755-5bc404e6-1bb5-4416-8351-6e671f7b5a43.png)
 
-La différence entre ces deux types de complexité temporel se fait ressentir avec une large quantité de donnée.
+La différence entre ces deux types de complexité temporel se fait ressentir avec une large quantité de données.
 
 ![TP_Trie_Courbes](https://user-images.githubusercontent.com/57684366/136666758-ff9b329a-b316-4e2d-9db7-85698781ff68.png)
 
