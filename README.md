@@ -50,6 +50,8 @@ La documentation est généré sous format HTML. Pour la lire, il suffit d'ouvri
 
 ## Résultats obtenus
 
+>Rappel : Sachant que le tri à bulle, le tri par insertion et le tri par selection ont une complexité quadratique, nous utiliserons des valeurs allant de 10^2 à 10^5 pour ces derniers.
+
 ![benchmeResults](https://user-images.githubusercontent.com/57684366/136668584-1bc00276-8aff-4eda-b8df-7f520eac41c6.png)
 
 ## Résultats attendus
