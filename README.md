@@ -30,7 +30,7 @@ Après avoir installé le programme, il faut utiliser la syntaxe suivante pour l
 * Linux : ``./Benchme resultats.csv`` (L'extension de fichier n'est pas forcément nécessaire sur Linux mais Il est toujours possible de l'utiliser pour faciliter l'accès à un grapheur)
 
 ## Documentation technique
-Il est possible de générer la documentation technique de ce projet avec Doxygen en suivant le protocole suivant :
+Il est possible de générer la documentation technique de ce projet avec [Doxygen](https://www.doxygen.nl/index.html) en suivant le protocole suivant :
 
 * Windows
   * Installation de Doxygen (Ne pas oublier d'ajouter Doxygen dans le PATH windows)
