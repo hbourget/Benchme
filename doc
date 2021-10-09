@@ -1,0 +1,11 @@
+================
+|BenchMe ver0.1|
+================
+
+Compilation : 
+Pour compiler BenchMe, utiliser simplement la commande make
+
+Utilisation :
+./BenchMe <ficher_de_sortie.txt>
+
+Ne pas oublier de rendre BenchMe executable apres la compilation.
