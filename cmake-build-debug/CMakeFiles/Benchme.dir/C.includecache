@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Admin/CLionProjects/Benchme/bench.c
+time.h
+-
+math.h
+-
+stdbool.h
+-
+misc.h
+C:/Users/Admin/CLionProjects/Benchme/misc.h
+tri.h
+C:/Users/Admin/CLionProjects/Benchme/tri.h
+
+C:/Users/Admin/CLionProjects/Benchme/misc.h
+
+C:/Users/Admin/CLionProjects/Benchme/tri.h
+
