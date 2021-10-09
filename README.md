@@ -32,14 +32,14 @@ Après avoir installé le programme, il faut utiliser la syntaxe suivante pour l
 ## Documentation technique
 Il est possible de générer la documentation technique de ce projet avec [Doxygen](https://www.doxygen.nl/index.html) en suivant le protocole suivant :
 
-* Windows
+* **Windows**
   * Installation de Doxygen (Ne pas oublier d'ajouter Doxygen dans le PATH windows)
     * [Sourceforge](https://sourceforge.net/projects/doxygen/files/rel-1.9.2/)
   * Génération de la documentation depuis la racine d'installation de Benchme
     * `mingw32-make documentation`
 
 
-* Linux
+* **Linux**
   * Installation de Doxygen 
     * ``sudo apt-get install doxygen``
   * Génération de la documentation depuis la racine d'installation de Benchme
