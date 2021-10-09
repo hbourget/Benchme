@@ -14,3 +14,4 @@ clean:
 
 .PHONY: documentation
 documentation:
+	doxygene Doxyfile
