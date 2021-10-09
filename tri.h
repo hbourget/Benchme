@@ -22,7 +22,7 @@ void triInsertion(float *tab, int taille);
 la différence maximale de profondeur entre deux feuilles est de 1 (i.e. toutes les feuilles se trouvent sur la dernière ou sur l'avant-dernière ligne) ;
 les feuilles de profondeur maximale sont « tassées » sur la gauche.
 chaque nœud est de valeur supérieure (resp. inférieure) à celles de ses deux fils, pour un tri ascendant (resp. descendant). */
-void tamiser(float *tab, int taille, int i);
+void triTasTamiser(float *tab, int taille, int i);
 
 void triTas(float *tab, int taille);
 

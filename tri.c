@@ -69,8 +69,7 @@ void triInsertion(float *tab, int taille)
         tab[j + 1] = x;
     }
 }
-
-void tamiser(float *tab, int taille, int i)
+void triTasTamiser(float *tab, int taille, int i)
 {
     int plusGrand = i; // Racine
     int gauche = 2 * i + 1; // gauche = 2 * racine + 1
@@ -97,7 +96,7 @@ void tamiser(float *tab, int taille, int i)
         tab[plusGrand] = swap;
 
         // Tassement récursif du sous arbre
-        tamiser(tab, taille, plusGrand);
+        triTasTamiser(tab, taille, plusGrand);
     }
 }
 
@@ -107,7 +106,7 @@ void triTas(float *tab, int taille)
     // Construction de l'arbre
     for (int i = taille / 2 - 1; i >= 0; i--)
     {
-        tamiser(tab, taille, i);
+        triTasTamiser(tab, taille, i);
     }
 
     // Extraction des elements 1 par 1
@@ -117,6 +116,6 @@ void triTas(float *tab, int taille)
         tab[0] = tab[i];
         tab[i] = temp;
 
-        tamiser(tab, i, 0);
+        triTasTamiser(tab, i, 0);
     }
 }
