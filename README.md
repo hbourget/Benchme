@@ -31,6 +31,10 @@ Après avoir installé le programme, il faut utiliser la syntaxe suivante pour l
 * Windows : ``Benchme.exe resultats.csv``
 * Linux : ``./Benchme resultats.txt`` (L'extension de fichier n'est pas forcément nécessaire sur Linux mais Il est toujours possible de l'utiliser pour faciliter l'accès à un grapheur)
 
+## Résultats obtenus
+
+![benchmeResults](https://user-images.githubusercontent.com/57684366/136667903-42982317-f980-437e-829d-a6d551b46670.png)
+
 ## Résultats attendus
 
 On attends des courbes représentant une fonction au carré pour 3 des 4 fonctions testés (Bulle, Insertion, Sélection):
