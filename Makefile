@@ -1,6 +1,4 @@
-CXX = g++
-CXXFLAGS = -Wall -Werror -Wextra -pedantic -std=c++17 -g -fpermissive -fsanitize=address
-LDFLAGS =  -fpermissive
+CXX = gcc
 
 SRC = ./*.c
 OBJ = $(SRC:.cc=.o)
