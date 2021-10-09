@@ -14,7 +14,7 @@ void benchBulle(char *fichier)
     int laGraine;
     bool sorted;
 
-    writeLabel("benchBulle", fichier);
+    writeLabel(__func__, fichier);
 
     //Sachant que le tri à bulle à une complexité quadratique, nous utiliserons des valeurs allant de 10^2 à 10^5
     for (int j = 2; j < 6; j++)
@@ -42,7 +42,7 @@ void benchBulle(char *fichier)
         if(sorted)
         {
             writeValue(moyenne, j, fichier);
-            logInfo("benchBulle", j, moyenne);
+            logInfo(__func__, j, moyenne);
         }
     }
 }
@@ -54,7 +54,7 @@ void benchSelection(char *fichier)
     int laGraine;
     bool sorted;
 
-    writeLabel("benchSelection", fichier);
+    writeLabel(__func__, fichier);
 
     //Sachant que le tri par selection à une complexité quadratique, nous utiliserons des valeurs allant de 10^2 à 10^5
     for (int j = 2; j < 6; j++)
@@ -82,7 +82,7 @@ void benchSelection(char *fichier)
         if(sorted)
         {
             writeValue(moyenne, j, fichier);
-            logInfo("benchSelection", j, moyenne);
+            logInfo(__func__, j, moyenne);
         }
     }
 }
@@ -94,7 +94,7 @@ void benchInsertion(char *fichier)
     int laGraine;
     bool sorted;
 
-    writeLabel("benchInsertion", fichier);
+    writeLabel(__func__, fichier);
 
     //Sachant que le tri par insertion à une complexité quadratique, nous utiliserons des valeurs allant de 10^2 à 10^5
     for (int j = 2; j < 6; j++)
@@ -122,7 +122,7 @@ void benchInsertion(char *fichier)
         if(sorted)
         {
             writeValue(moyenne, j, fichier);
-            logInfo("benchInsertion", j, moyenne);
+            logInfo(__func__, j, moyenne);
         }
     }
 }
@@ -134,7 +134,7 @@ void benchTas(char *fichier)
     int laGraine;
     bool sorted;
 
-    writeLabel("benchTas", fichier);
+    writeLabel(__func__ , fichier);
 
     //Définition de la taille du tableau (10^2 à 10^7)
     for (int j = 2; j < 8; j++)
@@ -162,7 +162,7 @@ void benchTas(char *fichier)
         if(sorted)
         {
             writeValue(moyenne, j, fichier);
-            logInfo("benchTas", j, moyenne);
+            logInfo(__func__, j, moyenne);
         }
     }
 }
