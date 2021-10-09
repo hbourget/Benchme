@@ -18,18 +18,35 @@ L'indice de performance comparé ici est la complexité temporel, ou comment év
 |Tri par tas / Heap sort|O(n log(n))
 
 ## Installation
-* **Etape 1** :
-Cloner le projet dans le répertoire souhaité : ``git clone https://github.com/hbourget/Benchme.git``
-* **Etape 2** :
-  Générer le fichier exécutable dans votre répertoire :
-  * Windows : ``mingw32-make``
-  * Linux : ``sudo make`` 
+  * Cloner le projet :``git clone https://github.com/hbourget/Benchme.git``
+  * Générer le fichier exécutable dans le répertoire
+    * Windows : ``mingw32-make``
+    * Linux : ``sudo make`` 
 
 ## Utilisation
-Après avoir installé le programme, il faut utiliser la syntaxe suivante pour le lancer :
+Après avoir installé le programme, il faut utiliser la syntaxe suivante pour l'exécuter :
 
 * Windows : ``Benchme.exe resultats.csv``
-* Linux : ``./Benchme resultats.txt`` (L'extension de fichier n'est pas forcément nécessaire sur Linux mais Il est toujours possible de l'utiliser pour faciliter l'accès à un grapheur)
+* Linux : ``./Benchme resultats.csv`` (L'extension de fichier n'est pas forcément nécessaire sur Linux mais Il est toujours possible de l'utiliser pour faciliter l'accès à un grapheur)
+
+## Documentation technique
+Il est possible de générer la documentation technique de ce projet avec Doxygen en suivant le protocole suivant :
+
+* Windows
+  * Installation de Doxygen (Ne pas oublier d'ajouter Doxygen dans le PATH windows)
+    * [Sourceforge](https://sourceforge.net/projects/doxygen/files/rel-1.9.2/)
+  * Génération de la documentation depuis la racine d'installation de Benchme
+    * `mingw32-make documentation`
+
+
+* Linux
+  * Installation de Doxygen 
+    * ``sudo apt-get install doxygen``
+  * Génération de la documentation depuis la racine d'installation de Benchme
+    * ``sudo make documentation``
+
+La documentation est généré sous format HTML. Pour la lire, il suffit d'ouvrir le fichier ``index.html`` situer dans le dossier **BenchmeDOC** qui vient d'être créé par Doxygen.
+
 
 ## Résultats obtenus
 
