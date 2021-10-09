@@ -1,10 +1,10 @@
 CXX = g++
 CXXFLAGS = -Wall -Werror -Wextra -pedantic -std=c++17 -g -fpermissive -fsanitize=address
-LDFLAGS =  -fsanitize=address -fpermissive 
+LDFLAGS =  -fpermissive
 
 SRC = ./*.c
 OBJ = $(SRC:.cc=.o)
-EXEC = BenchMe
+EXEC = Benchme
 
 all: $(EXEC)
 
