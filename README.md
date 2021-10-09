@@ -33,7 +33,7 @@ Après avoir installé le programme, il faut utiliser la syntaxe suivante pour l
 
 ## Résultats obtenus
 
-![benchmeResults](https://user-images.githubusercontent.com/57684366/136667903-42982317-f980-437e-829d-a6d551b46670.png)
+![benchmeResults](https://user-images.githubusercontent.com/57684366/136668584-1bc00276-8aff-4eda-b8df-7f520eac41c6.png)
 
 ## Résultats attendus
 
