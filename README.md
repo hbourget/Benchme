@@ -78,4 +78,3 @@ Si faire une comparaison prends ~0.1 sec
 |O(nlog(n))        | 10                |.1    |
 |O(nlog(n))        | 100               |20    |
 |O(nlog(n))        | 500               |135   |
-=======
