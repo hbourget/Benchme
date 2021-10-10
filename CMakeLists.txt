@@ -3,4 +3,4 @@ project(Benchme C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(Benchme main.c bench.c bench.h tri.c tri.h misc.c misc.h)
+add_executable(Benchme sources/main.c sources/bench.c headers/bench.h sources/tri.c headers/tri.h sources/misc.c headers/misc.h)

@@ -1,6 +1,6 @@
 CXX = g++
 
-SRC = ./*.c
+SRC = ./sources/*.c
 OBJ = $(SRC:.cc=.o)
 EXEC = Benchme
 
