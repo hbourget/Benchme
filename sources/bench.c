@@ -4,8 +4,8 @@
 #include <time.h>
 #include <math.h>
 #include <stdbool.h>
-#include "misc.h"
-#include "tri.h"
+#include "../headers/misc.h"
+#include "../headers/tri.h"
 
 void benchBulle(char *fichier)
 {
